@@ -1,14 +1,11 @@
 from bs4 import BeautifulSoup
-import urllib,requests
+import urllib
 import re
 python_web =urllib.urlopen("https://www.python.org/downloads/")
-resp = requests.get("https://www.python.org/downloads/")
-if python_web == resp:
-	print "same"
-else:
-	print "not same"
+#same as `python_web =requests.get("https://www.python.org/downloads/")`
 
 python_soup = BeautifulSoup(python_web.read(),"lxml")
+#same as `python_soup = BeautifulSoup(python_web.text,"lxml")`
 tags_a =python_soup.findAll(name="a",attrs={'href':re.compile("^https?://.*python\-2.*(exe|msi|zip|rar)$")})
 for tag_a in tags_a:
 	print tag_a["href"]
@@ -35,6 +32,15 @@ for tag_a in tags_a:
 	#https://winscp.net/ ../download/winscp577setup.exe
 
 
+print "https://live.sysinternals.com/autoruns.exe"
+print "https://live.sysinternals.com/Tcpview.exe"
+print "https://live.sysinternals.com/Desktops.exe"
+teamviewer_web =urllib.urlopen("https://www.teamviewer.com/zhcn/download/windows/")
+teamviewer_soup = BeautifulSoup(teamviewer_web.read(),"lxml")
+tags_a =teamviewer_soup.findAll(name="a",attrs={'href':re.compile("^.*Setup.zhcn.exe$")})
+for tag_a in tags_a:
+	print  tag_a["href"]
+
 
 #https://www.jetbrains.com/pycharm/download/#section=windows
 #https://download.jetbrains.com/python/pycharm-community-2016.1.4.exe
@@ -43,3 +49,4 @@ for tag_a in tags_a:
 #tags_a =nmap_soup.findAll(name="a",attrs={'href':re.compile("^.*(exe|msi|zip|rar)$")})
 #for tag_a in tags_a:
 #	print "https://www.voidtools.com%s" % tag_a["href"]
+#https://www.teamviewer.com/zhcn/download/windows/
