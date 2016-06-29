@@ -41,12 +41,43 @@ tags_a =teamviewer_soup.findAll(name="a",attrs={'href':re.compile("^.*Setup.zhcn
 for tag_a in tags_a:
 	print  tag_a["href"]
 
+#https://notepad-plus-plus.org/download/v6.9.2.html
+#https://notepad-plus-plus.org/zh/download/
+notepadplus_web =urllib.urlopen("https://notepad-plus-plus.org/zh/download/")
+notepadplus_soup = BeautifulSoup(notepadplus_web.read(),"lxml")
+tags_a =notepadplus_soup.findAll(name="a",attrs={'href':re.compile(".*exe$")})
+for tag_a in tags_a:
+	print  "https://notepad-plus-plus.org%s" % tag_a["href"]
 
-#https://www.jetbrains.com/pycharm/download/#section=windows
-#https://download.jetbrains.com/python/pycharm-community-2016.1.4.exe
+
+
+qq_web =urllib.urlopen("http://im.qq.com/pcqq/")
+qq_soup = BeautifulSoup(qq_web.read(),"lxml")
+tags_a =qq_soup.findAll(name="a",attrs={'href':re.compile(".*exe$")})
+for tag_a in tags_a:
+	print  "%s" % tag_a["href"]
+
+
+
+TestDisk_PhotoRec_web =urllib.urlopen("http://www.cgsecurity.org/wiki/TestDisk_Download")
+TestDisk_PhotoRec_soup = BeautifulSoup(TestDisk_PhotoRec_web.read(),"lxml")
+tags_a =TestDisk_PhotoRec_soup.findAll(name="a",attrs={'href':re.compile(".*[0-9]\.win64.zip$")})
+for tag_a in tags_a:
+	print  "%s" % tag_a["href"]
+
+
+#winrar_web =urllib.urlopen("http://www.rarlab.com/download.htm")
+#winrar_soup = BeautifulSoup(winrar_web.read(),"lxml")
+#print winrar_soup.prettify()
+#tags_a =winrar_soup.findAll(name="a",attrs={'href':re.compile("^http:.*$")})
+#print  tags_a
+#for tag_a in tags_a:
+	#print  tag_a["href"]
+
+
 #nmap_web =urllib.urlopen("https://nmap.org/download.html")
 #nmap_soup = BeautifulSoup(nmap_web.read(),"lxml")
 #tags_a =nmap_soup.findAll(name="a",attrs={'href':re.compile("^.*(exe|msi|zip|rar)$")})
 #for tag_a in tags_a:
-#	print "https://www.voidtools.com%s" % tag_a["href"]
-#https://www.teamviewer.com/zhcn/download/windows/
+#	print  tag_a["href"]
+
