@@ -34,7 +34,6 @@ for tag_a in tags_a:
 
 print "https://live.sysinternals.com/autoruns.exe"
 print "https://live.sysinternals.com/Tcpview.exe"
-print "https://live.sysinternals.com/Desktops.exe"
 teamviewer_web =urllib.urlopen("https://www.teamviewer.com/zhcn/download/windows/")
 teamviewer_soup = BeautifulSoup(teamviewer_web.read(),"lxml")
 tags_a =teamviewer_soup.findAll(name="a",attrs={'href':re.compile("^.*Setup.zhcn.exe$")})
@@ -53,7 +52,7 @@ for tag_a in tags_a:
 
 qq_web =urllib.urlopen("http://im.qq.com/pcqq/")
 qq_soup = BeautifulSoup(qq_web.read(),"lxml")
-tags_a =qq_soup.findAll(name="a",attrs={'href':re.compile(".*exe[ ]*$")})
+tags_a =qq_soup.findAll(name="a",attrs={'href':re.compile(".*exe[ ].*$")})
 for tag_a in tags_a:
 	print  "%s" % tag_a["href"]
 
