@@ -52,7 +52,7 @@ for tag_a in tags_a:
 
 qq_web =urllib.urlopen("http://im.qq.com/pcqq/")
 qq_soup = BeautifulSoup(qq_web.read(),"lxml")
-tags_a =qq_soup.findAll(name="a",attrs={'href':re.compile(".*exe[ ].*$")})
+tags_a =qq_soup.findAll(name="a",attrs={'href':re.compile(".*exe[ ]*$")})
 for tag_a in tags_a:
 	print  "%s" % tag_a["href"]
 
