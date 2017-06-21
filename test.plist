@@ -13,6 +13,22 @@
 					<key>url</key>
 					<string>http://static.enjoymi.com/sgzj_adhoc.ipa</string>
 				</dict>
+				<dict>  
+                    <key>kind</key>  
+                    <string>full-size-image</string>  
+                    <key>needs-shine</key>  
+                    <true/>  
+                    <key>url</key>  
+                    <string>http://static.enjoymi.com/ios_512.png</string>  
+                </dict>
+			<dict>  
+                    <key>kind</key>  
+                    <string>display-image</string>  
+                    <key>needs-shine</key>
+			<true/>  
+                    <key>url</key>  
+                    <string>http://static.enjoymi.com/ios_57.png</string>  
+                </dict> 	
 			</array>
 			<key>metadata</key>
 			<dict>
