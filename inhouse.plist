@@ -19,7 +19,7 @@
                     <key>needs-shine</key>  
                     <true/>  
                     <key>url</key>  
-                    <string>http://static.enjoymi.com/ios_512.png</string>  
+                    <string>http://static.enjoymi.com/512.png</string>  
                 </dict>
 			<dict>  
                     <key>kind</key>  
@@ -27,7 +27,7 @@
                     <key>needs-shine</key>
 			<true/>  
                     <key>url</key>  
-                    <string>http://static.enjoymi.com/ios_57.png</string>  
+                    <string>http://static.enjoymi.com/57.png</string>  
                 </dict> 	
 			</array>
 			<key>metadata</key>
