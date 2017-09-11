@@ -15,17 +15,13 @@
 				</dict>
 				<dict>  
                     <key>kind</key>  
-                    <string>full-size-image</string>  
-                    <key>needs-shine</key>  
-                    <true/>  
+                    <string>full-size-image</string>   
                     <key>url</key>  
                     <string>http://static.enjoymi.com/512.png</string>  
                 </dict>
 			<dict>  
                     <key>kind</key>  
-                    <string>display-image</string>  
-                    <key>needs-shine</key>
-			<true/>  
+                    <string>display-image</string>   
                     <key>url</key>  
                     <string>http://static.enjoymi.com/57.png</string>  
                 </dict> 	
