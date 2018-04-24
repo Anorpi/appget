@@ -11,19 +11,19 @@
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>http://static.enjoymi.com/Unity-iPhone.ipa</string>
+					<string>http://hotupdate.enjoymi.com/packages/Unity_iPhone_sgzj.ipa</string>
 				</dict>
-				<dict>  
+		<dict>  
                     <key>kind</key>  
                     <string>full-size-image</string>   
                     <key>url</key>  
-                    <string>http://static.enjoymi.com/512.png</string>  
+                    <string>http://hotupdate.enjoymi.com/packages/icon/512.png</string>  
                 </dict>
-			<dict>  
+		<dict>  
                     <key>kind</key>  
                     <string>display-image</string>   
                     <key>url</key>  
-                    <string>http://static.enjoymi.com/57.png</string>  
+                    <string>http://hotupdate.enjoymi.com/packages/icon/57.png</string>  
                 </dict> 	
 			</array>
 			<key>metadata</key>
